@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:project_pab/page/ayat_kursi_page.dart';
+import 'package:project_pab/page/bacaan_sholat_page.dart';
 import 'package:project_pab/page/niat_sholat_page.dart';
 
 class MainPage extends StatefulWidget {
@@ -57,7 +59,12 @@ class _MainPageState extends State<MainPage> {
                 child: InkWell(
                   highlightColor: Colors.transparent,
                   splashColor: Colors.transparent,
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => BacaanSholat()));
+                  },
                   child: Column(
                     children: <Widget>[
                       Image(
@@ -87,7 +94,10 @@ class _MainPageState extends State<MainPage> {
                 child: InkWell(
                   highlightColor: Colors.transparent,
                   splashColor: Colors.transparent,
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => AyatKursi()));
+                  },
                   child: Column(
                     children: <Widget>[
                       Image(
